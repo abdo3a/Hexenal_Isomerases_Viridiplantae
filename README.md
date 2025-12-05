@@ -19,7 +19,7 @@ seqkit grep -f PF07883.protein_ids.txt Viridiplantae.fasta > CUPIN.fasta
 cat CUPIN.fasta HI_all_ref.fasta > CUPIN_all.fasta
 ````
 
-## 2. cupin-domain phylogenetic
+## 2. Cupin-domain containing proteins phylogenetic analysis
 
 ````bash
 
@@ -30,7 +30,7 @@ trimal -in CUPIN_all.aln.fasta -out CUPIN_all_gene.fasta -gappyou
 iqtree -s CUPIN_all_gene.fasta -m TEST -n AUTO
 ````
 
-## 3. domain screening of potential HI orthologs
+## 3. Domain screening of potential HI orthologs
 
 ````bash
 wget -q "https://cloud.uni-konstanz.de/index.php/s/MMzHFEBjZLrpmN7/download" -O "Pf_Sm"
@@ -48,7 +48,7 @@ grep -v "^#" HI_orthologs.domtblout | \
     > HI_orthologs.domains.tsv
 ````
 
-## 4. potential HI orthologs phylogenetic
+## 4. Potential HI orthologs phylogenetic analysis
 
 ````bash
 cat pHi.fasta HI_all_ref.fasta > pHi_all.fasta

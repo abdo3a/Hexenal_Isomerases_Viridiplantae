@@ -10,11 +10,11 @@ hmmpress PF07883.hmm
 
 hmmsearch --cpu 8 -E 1e-5 \
   --domtblout PF07883.domtblout \
-  PF07883.hmm proteins.fasta > PF07883.hmmsearch.out
+  PF07883.hmm Viridiplantae.fasta > PF07883.hmmsearch.out
 
 grep -v "^#" PF07883.domtblout | awk '{print $1}' | sort -u > PF07883.protein_ids.txt
 
-seqkit grep -f PF07883.protein_ids.txt proteins.fasta > CUPIN.fasta
+seqkit grep -f PF07883.protein_ids.txt Viridiplantae.fasta > CUPIN.fasta
 
 cat CUPIN.fasta HI_all_ref.fasta > CUPIN_all.fasta
 ````

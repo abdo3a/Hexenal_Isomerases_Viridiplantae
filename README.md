@@ -1,7 +1,7 @@
 # Hexenal_Isomerases_Viridiplantae
 Scripts used in Homolog identification and phylogenetic analysis of hexenal isomerases in the green lineage (Viridiplantae)
 
-## 1. All cupin-domain (PF07883) containing proteins
+## 1. Homology search of cupin-domain (PF07883) containing proteins
 
 ````bash
 wget http://pfam.xfam.org/family/PF07883/hmm -O PF07883.hmm
